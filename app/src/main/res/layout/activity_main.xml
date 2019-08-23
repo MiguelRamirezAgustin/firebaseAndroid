@@ -20,6 +20,8 @@
           android:hint="correo"
           android:layout_marginTop="10dp"
           android:gravity="center"
+          android:inputType="text"
+          android:maxEms="35"
           />
 
       <EditText
@@ -29,6 +31,8 @@
           android:layout_marginTop="40dp"
           android:hint="Contraseña"
           android:gravity="center"
+          android:inputType="textPassword"
+          android:maxEms="20"
           />
 
       <Button

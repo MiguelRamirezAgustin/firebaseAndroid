@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressDialog progressDialog;
     private Button buttonRegistrar;
 
+
+    private static int TIME_OUT=400;
     private FirebaseAuth firebaseAuth;
 
 
@@ -43,13 +45,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+
+
     public void registroUsuario(){
         String email = TextEmail.getText().toString().trim();
         String password = TextPassword.getText().toString().trim();
 
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this, "El campo de email no debe de estar vacio", Toast.LENGTH_SHORT).show();
+
             return;
+
         }
 
         if(TextUtils.isEmpty(password)){
@@ -67,7 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "El registro fue exitios", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "El registro fue exitios del usuaruio: " + TextEmail.getText(), Toast.LENGTH_SHORT).show();
+                            TextPassword.getText().clear();
+                            TextEmail.getText().clear();
                         } else {
                             Toast.makeText(MainActivity.this, "Fallo al realizar registro", Toast.LENGTH_SHORT).show();
 
