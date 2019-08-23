@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorActivy"
     tools:context=".MainActivity">
 
   <LinearLayout
@@ -15,34 +16,52 @@
 
       <EditText
           android:id="@+id/Edit_Correo"
-          android:layout_width="300dp"
-          android:layout_height="50dp"
+          android:layout_width="@dimen/btn_width"
+          android:layout_height="@dimen/btn_height"
           android:hint="correo"
           android:layout_marginTop="10dp"
           android:gravity="center"
           android:inputType="text"
-          android:maxEms="35"
+          android:textColor="@color/colorLetra"
+          android:textColorHint="#131232"
+          android:maxLength="35"
           />
 
       <EditText
           android:id="@+id/Edit_Contrasena"
-          android:layout_width="300dp"
-          android:layout_height="50dp"
+          android:layout_width="@dimen/btn_width"
+          android:layout_height="@dimen/btn_height"
           android:layout_marginTop="40dp"
           android:hint="Contraseña"
           android:gravity="center"
           android:inputType="textPassword"
-          android:maxEms="20"
+          android:textColor="@color/colorLetra"
+          android:textColorHint="#131232"
+          android:maxLength="20"
+
+          />
+
+      <Button
+          android:id="@+id/btn_Registro"
+          android:layout_width="@dimen/btn_width"
+          android:layout_height="@dimen/btn_height"
+          android:layout_marginTop="50dp"
+          android:text="REGISTRO"
+          android:background="@color/colorBtn"
+          android:textColor="@color/colorLetra"
+          android:onClick="onClick"
           />
 
       <Button
           android:id="@+id/btn_Login"
-          android:layout_width="300dp"
-          android:layout_height="40dp"
+          android:layout_width="@dimen/btn_width"
+          android:layout_height="@dimen/btn_height"
           android:layout_marginTop="50dp"
           android:text="LOGIN"
-          android:background="#16CCCC"
-          android:onClick="onClick"/>
+          android:background="@color/colorBtn"
+          android:textColor="@color/colorLetra"
+          android:onClick="onClick"
+          />
   </LinearLayout>
 
 </RelativeLayout>
