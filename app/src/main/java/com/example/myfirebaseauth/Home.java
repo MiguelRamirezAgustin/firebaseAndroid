@@ -41,13 +41,16 @@ public class Home extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        String Nombre = textView_N.getText().toString();
 
+        switch (item.getItemId()){
             case R.id.ico_add:
+            if(Nombre.equals("")){
+                validacion();
+            }else {
                 Toast.makeText(this,"Agregar",Toast.LENGTH_SHORT).show();
                 break;
-
-
+            }
             case R.id.ico_save:
                 Toast.makeText(this, "Guardar", Toast.LENGTH_SHORT).show();
                 break;
@@ -57,5 +60,14 @@ public class Home extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    private void validacion() {
+        String Nombre = textView_N.getText().toString();
+
+        if(Nombre.equals("")){
+            textView_N.setError("Requerido");
+        }
+
     }
 }
