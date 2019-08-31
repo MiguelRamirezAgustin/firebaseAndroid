@@ -4,64 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorActivy"
+    android:background="@drawable/fondologin"
     tools:context=".MainActivity">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:gravity="center"
-      android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textColor="@color/colorblanco"
+            android:textSize="35dp"
+            android:paddingLeft="150dp"
+            android:layout_marginTop="0dp"/>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/usuario"/>
+
+        </LinearLayout>
 
 
-      <EditText
-          android:id="@+id/Edit_Correo"
-          android:layout_width="@dimen/btn_width"
-          android:layout_height="@dimen/btn_height"
-          android:hint="correo"
-          android:layout_marginTop="10dp"
-          android:gravity="center"
-          android:inputType="text"
-          android:textColor="@color/colorLetra"
-          android:textColorHint="#131232"
-          android:maxLength="35"
-          />
 
-      <EditText
-          android:id="@+id/Edit_Contrasena"
-          android:layout_width="@dimen/btn_width"
-          android:layout_height="@dimen/btn_height"
-          android:layout_marginTop="40dp"
-          android:hint="Contraseña"
-          android:gravity="center"
-          android:inputType="textPassword"
-          android:textColor="@color/colorLetra"
-          android:textColorHint="#131232"
-          android:maxLength="20"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="13dp">
 
-          />
 
-      <Button
-          android:id="@+id/btn_Registro"
-          android:layout_width="@dimen/btn_width"
-          android:layout_height="@dimen/btn_height"
-          android:layout_marginTop="50dp"
-          android:text="REGISTRO"
-          android:background="@color/colorBtn"
-          android:textColor="@color/colorLetra"
-          android:onClick="onClick"
-          />
+            <EditText
+                android:id="@+id/Edit_Correo"
+                android:layout_width="@dimen/btnG_width"
+                android:layout_height="40dp"
+                android:hint="correo"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:textColor="@color/colorblanco"
+                android:maxLength="25" />
 
-      <Button
-          android:id="@+id/btn_Login"
-          android:layout_width="@dimen/btn_width"
-          android:layout_height="@dimen/btn_height"
-          android:layout_marginTop="50dp"
-          android:text="LOGIN"
-          android:background="@color/colorBtn"
-          android:textColor="@color/colorLetra"
-          android:onClick="onClick"
-          />
-  </LinearLayout>
+            <EditText
+                android:id="@+id/Edit_Contrasena"
+                android:layout_width="@dimen/btnG_width"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:hint="Contraseña"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:textColor="@color/colorblanco"
+                android:maxLength="15" />
+
+
+            <Button
+                android:id="@+id/btn_Registro"
+                android:layout_width="@dimen/btnG_width"
+                android:layout_height="@dimen/btnG_height"
+                android:layout_marginTop="50dp"
+                android:text="REGISTRO"
+                android:background="@color/colorBoton"
+                android:textColor="@color/colorLetra"
+                android:onClick="onClick" />
+
+            <Button
+                android:id="@+id/btn_Login"
+                android:layout_width="@dimen/btnG_width"
+                android:layout_height="@dimen/btnG_height"
+                android:layout_marginTop="50dp"
+                android:text="LOGIN"
+                android:background="@color/colorBoton"
+                android:textColor="@color/colorLetra"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorActivy"
+    android:background="@color/colorActivity"
     android:padding="20dp"
     android:orientation="vertical"
     tools:context=".Home">
@@ -21,8 +21,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="15dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        />
+        android:inputType="textPersonName"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -39,8 +38,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            />
+            android:inputType="textPersonName"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -56,8 +54,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            />
+            android:inputType="textPersonName"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -74,8 +71,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:ems="10"
-            android:inputType="textPassword"
-            />
+            android:inputType="textPassword"/>
 
     </android.support.design.widget.TextInputLayout>
 

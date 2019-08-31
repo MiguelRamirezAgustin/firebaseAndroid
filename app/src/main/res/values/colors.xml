@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorActivy">#B1C6D6</color>
-    <color name="colorLetra">#F6F3F7</color>
-    <color name="colorBtn">#463423</color>
+    <color name="colorLetra">#78AFE6</color>
+    <color name="colorBoton">#DAF0F3</color>
+    <color name="colorblanco">#F8F8F7</color>
+    <color name="colorActivity">#08CFEE</color>
 </resources>
