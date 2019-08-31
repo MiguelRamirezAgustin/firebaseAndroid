@@ -11,17 +11,21 @@
 
 
     <android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Nombre">
-
-    <EditText
-        android:id="@+id/Edit_PersonaNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:ems="10"
-        android:inputType="textPersonName"/>
+        android:hint="Nombre"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/PersonaNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorblanco"
+            android:maxLength="15"
+            android:gravity="center"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -33,12 +37,15 @@
         android:hint="Apellidos">
 
         <EditText
-            android:id="@+id/Edit_PersonaApellidos"
+            android:id="@+id/PersonaApellidos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:ems="10"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:textColor="@color/colorblanco"
+            android:maxLength="30"
+            android:gravity="center"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -49,12 +56,15 @@
         android:hint="Correo">
 
         <EditText
-            android:id="@+id/Edit_PersonaCorreo"
+            android:id="@+id/PersonaCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:ems="10"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:textColor="@color/colorblanco"
+            android:maxLength="25"
+            android:gravity="center"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -66,29 +76,43 @@
         android:hint="Contraseña">
 
         <EditText
-            android:id="@+id/Edit_PersonaContrasena"
+            android:id="@+id/PersonaContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:ems="10"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:textColor="@color/colorblanco"
+            android:maxLength="15"
+            android:gravity="center"/>
 
     </android.support.design.widget.TextInputLayout>
 
 
-    <TextView
-        android:layout_margin="15dp"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lista de Personas"
-        android:layout_gravity="center_horizontal"
-        android:textSize="30dp"/>
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista de Personas"
+            android:gravity="center"
+            android:textSize="30dp"/>
 
 
-    <ListView
-        android:id="@+id/List_datosPerson"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <ListView
+            android:id="@+id/List_datosPerson"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
 
 
 

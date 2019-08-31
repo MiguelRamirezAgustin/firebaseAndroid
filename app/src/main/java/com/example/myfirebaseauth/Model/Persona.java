@@ -2,10 +2,19 @@ package com.example.myfirebaseauth.Model;
 
 public class Persona {
 
-    public  String uiId;
-    public String Nombre;
-    public String Apellido;
-    public String correo;
+    private   String uiId;
+    private String Nombre;
+    private String Apellido;
+    private String correo;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     // constructor vacio
     public Persona() {
