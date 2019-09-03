@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -37,6 +38,8 @@ public class Home extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
+    Persona personaSelect;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,21 @@ public class Home extends AppCompatActivity {
 
         inicializarFirebase();
         listaData();
+
+
+        //seleccionar iten de lista
+        listView_Usuarios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+              //seleccionar posision
+              personaSelect= (Persona) parent.getItemAtPosition(position);
+              editTextN.setText(personaSelect.getNombre());
+              editTextA.setText(personaSelect.getApellido());
+              editTextC.setText(personaSelect.getCorreo());
+              editTextNPs.setText(personaSelect.getPassword());
+            }
+
+        });
 
     }
 
@@ -127,13 +145,28 @@ public class Home extends AppCompatActivity {
                     break;
                 }
             }
-            case R.id.ico_save:
-                Toast.makeText(this, "Guardar", Toast.LENGTH_SHORT).show();
-                break;
+            case R.id.ico_save: {
+                //Acualizar datos
 
-            case R.id.ico_delete:
-                Toast.makeText(this, "eliminar", Toast.LENGTH_SHORT).show();
+                Persona p = new Persona();
+                p.setUiId(personaSelect.getUiId());
+                p.setNombre(editTextN.getText().toString().trim());
+                p.setApellido(editTextA.getText().toString().trim());
+                p.setCorreo(editTextC.getText().toString().trim());
+                p.setPassword(editTextNPs.getText().toString().trim());
+                databaseReference.child("Personas").child(p.getUiId()).setValue(p);
+                LimpiarDatos();
+                Toast.makeText(this, "Actualizado...!!", Toast.LENGTH_SHORT).show();
                 break;
+            }
+            case R.id.ico_delete: {
+                Persona p = new Persona();
+                p.setUiId(personaSelect.getUiId());
+                databaseReference.child("Personas").child(p.getUiId()).removeValue();
+                Toast.makeText(this, "eliminar", Toast.LENGTH_SHORT).show();
+                LimpiarDatos();
+                break;
+            }
         }
         return true;
     }
