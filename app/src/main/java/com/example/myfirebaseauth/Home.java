@@ -81,7 +81,8 @@ public class Home extends AppCompatActivity {
 
     private void inicializarFirebase() {
         firebaseDatabase = FirebaseDatabase.getInstance();
-        firebaseDatabase.setPersistenceEnabled(true);
+        //Se agrega persistencia de datos mediante clase firebasePersistenciaDatos
+        //firebaseDatabase.setPersistenceEnabled(true);
         databaseReference = firebaseDatabase.getReference();
     }
 
